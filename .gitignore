@@ -1,0 +1,17 @@
+# build output
+build/
+out/
+.xmake/
+vsxmake*/
+.vs/
+*.user
+compile_commands.json
+
+# local test renders and downloads (not part of the mod)
+/*.wav
+/preview*.txt
+/suddendice*.txt
+/neutral_preview.txt
+/blend_preview.txt
+/*.zip
+/voicepacks/
