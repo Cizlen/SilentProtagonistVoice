@@ -1,0 +1,142 @@
+Pack downloaded from Freesound
+----------------------------------------
+
+"AS015537"
+
+This Pack of sounds contains sounds by the following user:
+ - SuddenDice ( https://freesound.org/people/SuddenDice/ )
+
+You can find this pack online at: https://freesound.org/people/SuddenDice/packs/31405/
+
+
+Licenses in this Pack (see below for individual sound licenses)
+---------------------------------------------------------------
+
+Creative Commons 0: http://creativecommons.org/publicdomain/zero/1.0/
+
+
+Sounds in this Pack
+-------------------
+
+  * 559744__suddendice__as015537_satisfaction.flac.flac
+    * url: https://freesound.org/s/559744/
+    * license: Creative Commons 0
+  * 559743__suddendice__as015537_shame.flac.flac
+    * url: https://freesound.org/s/559743/
+    * license: Creative Commons 0
+  * 559742__suddendice__as015537_relief.flac.flac
+    * url: https://freesound.org/s/559742/
+    * license: Creative Commons 0
+  * 559741__suddendice__as015537_sadness.flac.flac
+    * url: https://freesound.org/s/559741/
+    * license: Creative Commons 0
+  * 559740__suddendice__as015537_pity.flac.flac
+    * url: https://freesound.org/s/559740/
+    * license: Creative Commons 0
+  * 559739__suddendice__as015537_reflection.flac.flac
+    * url: https://freesound.org/s/559739/
+    * license: Creative Commons 0
+  * 559738__suddendice__as015537_physical-endurance.flac.flac
+    * url: https://freesound.org/s/559738/
+    * license: Creative Commons 0
+  * 559737__suddendice__as015537_physical-exortion.flac.flac
+    * url: https://freesound.org/s/559737/
+    * license: Creative Commons 0
+  * 559736__suddendice__as015537_surprise.flac.flac
+    * url: https://freesound.org/s/559736/
+    * license: Creative Commons 0
+  * 559735__suddendice__as015537_yeah.flac.flac
+    * url: https://freesound.org/s/559735/
+    * license: Creative Commons 0
+  * 559734__suddendice__as015537_excitement.flac.flac
+    * url: https://freesound.org/s/559734/
+    * license: Creative Commons 0
+  * 559733__suddendice__as015537_fear.flac.flac
+    * url: https://freesound.org/s/559733/
+    * license: Creative Commons 0
+  * 559732__suddendice__as015537_craving.flac.flac
+    * url: https://freesound.org/s/559732/
+    * license: Creative Commons 0
+  * 559731__suddendice__as015537_despair.flac.flac
+    * url: https://freesound.org/s/559731/
+    * license: Creative Commons 0
+  * 559730__suddendice__as015537_empathetic-pain.flac.flac
+    * url: https://freesound.org/s/559730/
+    * license: Creative Commons 0
+  * 559729__suddendice__as015537_envy.flac.flac
+    * url: https://freesound.org/s/559729/
+    * license: Creative Commons 0
+  * 559728__suddendice__as015537_boo.flac.flac
+    * url: https://freesound.org/s/559728/
+    * license: Creative Commons 0
+  * 559727__suddendice__as015537_boredom.flac.flac
+    * url: https://freesound.org/s/559727/
+    * license: Creative Commons 0
+  * 559726__suddendice__as015537_calmness.flac.flac
+    * url: https://freesound.org/s/559726/
+    * license: Creative Commons 0
+  * 559725__suddendice__as015537_confusion.flac.flac
+    * url: https://freesound.org/s/559725/
+    * license: Creative Commons 0
+  * 559724__suddendice__as015537_kindness.flac.flac
+    * url: https://freesound.org/s/559724/
+    * license: Creative Commons 0
+  * 559723__suddendice__as015537_joy.flac.flac
+    * url: https://freesound.org/s/559723/
+    * license: Creative Commons 0
+  * 559722__suddendice__as015537_negation.flac.flac
+    * url: https://freesound.org/s/559722/
+    * license: Creative Commons 0
+  * 559721__suddendice__as015537_low-spirits.flac.flac
+    * url: https://freesound.org/s/559721/
+    * license: Creative Commons 0
+  * 559720__suddendice__as015537_grief.flac.flac
+    * url: https://freesound.org/s/559720/
+    * license: Creative Commons 0
+  * 559719__suddendice__as015537_friendship.flac.flac
+    * url: https://freesound.org/s/559719/
+    * license: Creative Commons 0
+  * 559718__suddendice__as015537_indignation.flac.flac
+    * url: https://freesound.org/s/559718/
+    * license: Creative Commons 0
+  * 559717__suddendice__as015537_hatred.flac.flac
+    * url: https://freesound.org/s/559717/
+    * license: Creative Commons 0
+  * 559716__suddendice__as015537_pain.flac.flac
+    * url: https://freesound.org/s/559716/
+    * license: Creative Commons 0
+  * 559715__suddendice__as015537_nostalgia.flac.flac
+    * url: https://freesound.org/s/559715/
+    * license: Creative Commons 0
+  * 559714__suddendice__as015537_awe.flac.flac
+    * url: https://freesound.org/s/559714/
+    * license: Creative Commons 0
+  * 559713__suddendice__as015537_awkwardness.flac.flac
+    * url: https://freesound.org/s/559713/
+    * license: Creative Commons 0
+  * 559712__suddendice__as015537_amusement.flac.flac
+    * url: https://freesound.org/s/559712/
+    * license: Creative Commons 0
+  * 559711__suddendice__as015537_anger.flac.flac
+    * url: https://freesound.org/s/559711/
+    * license: Creative Commons 0
+  * 559710__suddendice__as015537_anticipation.flac.flac
+    * url: https://freesound.org/s/559710/
+    * license: Creative Commons 0
+  * 559709__suddendice__as015537_anxiety.flac.flac
+    * url: https://freesound.org/s/559709/
+    * license: Creative Commons 0
+  * 559708__suddendice__as015537_admiration.flac.flac
+    * url: https://freesound.org/s/559708/
+    * license: Creative Commons 0
+  * 559707__suddendice__as015537_adoration.flac.flac
+    * url: https://freesound.org/s/559707/
+    * license: Creative Commons 0
+  * 559706__suddendice__as015537_aesthetic-appreciation.flac.flac
+    * url: https://freesound.org/s/559706/
+    * license: Creative Commons 0
+  * 559705__suddendice__as015537_affirmation.flac.flac
+    * url: https://freesound.org/s/559705/
+    * license: Creative Commons 0
+
+
