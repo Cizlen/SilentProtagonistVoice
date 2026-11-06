@@ -28,14 +28,18 @@ jobs:
           key: xmake-${{ hashFiles('xmake.lua', 'lib/commonlibsse-ng/xmake.lua') }}
           restore-keys: xmake-
 
-      - name: Configure
-        run: xmake f -m releasedbg -y
-
+      # CommonLib fetches a prebuilt library whenever it sees GITHUB_ACTIONS, but that
+      # library is baked with VR on and this plugin is SE/AE only, so build it from source.
       - name: Build
-        run: xmake -y
-
-      - name: Collect mod folder
-        run: xmake install -o build/mod
+        shell: pwsh
+        run: |
+          Remove-Item Env:GITHUB_ACTIONS -ErrorAction SilentlyContinue
+          xmake f -m releasedbg -y
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          xmake -y
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          xmake install -o build/mod
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
 
       - name: Upload mod folder
         uses: actions/upload-artifact@v4
