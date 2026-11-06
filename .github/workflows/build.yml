@@ -1,21 +1,43 @@
-# Builds the plugin on GitHub's Windows machines on every push and pull request.
-# Download the "SilentProtagonistVoice" artifact from the run's summary page:
-# it's the ready-to-install mod folder (DLL, INI, bundled voices).
+# Builds the plugin on GitHub's Windows machines.
+#
+# - Every push and pull request: download the "SilentProtagonistVoice" artifact from
+#   the run's page; it's the ready-to-install mod folder (DLL, INI, bundled voices).
+# - Publishing a GitHub release: the same build is zipped and attached to the release
+#   as SilentProtagonistVoice-<tag>.zip (MO2-installable), together with
+#   SilentProtagonistVoice-VoicePackTools-<tag>.zip for pack makers.
+# - To attach files to a release that already exists: Actions tab -> build ->
+#   Run workflow, and enter its tag (e.g. v1.0.0).
+#
 # The first run compiles CommonLibSSE-NG and takes a while; later runs reuse the cache.
 name: build
 
 on:
   push:
   pull_request:
+  release:
+    types: [published]
   workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Attach the build to this existing release tag (e.g. v1.0.0). Leave empty to just build."
+        required: false
+        default: ""
+
+permissions:
+  contents: write  # attaching files to releases
 
 jobs:
   build:
     runs-on: windows-latest
+    env:
+      # the release to attach to, if any
+      RELEASE_TAG: ${{ github.event_name == 'release' && github.event.release.tag_name || inputs.release_tag }}
     steps:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
+          # build the tagged source when attaching to a release
+          ref: ${{ github.event_name == 'release' && github.event.release.tag_name || inputs.release_tag || github.ref }}
 
       - uses: xmake-io/github-action-setup-xmake@v1
         with:
@@ -46,3 +68,27 @@ jobs:
         with:
           name: SilentProtagonistVoice
           path: build/mod
+
+      - name: Attach to release
+        if: env.RELEASE_TAG != ''
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $tag = $env:RELEASE_TAG
+          if (-not (Test-Path build/mod/SKSE/Plugins/SilentProtagonistVoice.dll)) { throw "DLL missing from build/mod" }
+          New-Item -ItemType Directory -Force release | Out-Null
+
+          # the mod: SKSE\ and Sound\ at the top of the zip, so MO2 installs it as-is
+          $mod = "release/SilentProtagonistVoice-$tag.zip"
+          Compress-Archive -Path build/mod/* -DestinationPath $mod -Force
+
+          # pack-making tools (make_voicepack.py needs neutralize.py next to it)
+          New-Item -ItemType Directory -Force release/tools/tools | Out-Null
+          Copy-Item tools/*.py release/tools/tools/
+          Copy-Item VOICE_PACKS.md, LICENSE release/tools/
+          $tools = "release/SilentProtagonistVoice-VoicePackTools-$tag.zip"
+          Compress-Archive -Path release/tools/* -DestinationPath $tools -Force
+
+          gh release upload $tag $mod $tools --clobber --repo $env:GITHUB_REPOSITORY
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
