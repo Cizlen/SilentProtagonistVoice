@@ -1,0 +1,44 @@
+# Builds the plugin on GitHub's Windows machines on every push and pull request.
+# Download the "SilentProtagonistVoice" artifact from the run's summary page:
+# it's the ready-to-install mod folder (DLL, INI, bundled voices).
+# The first run compiles CommonLibSSE-NG and takes a while; later runs reuse the cache.
+name: build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - uses: xmake-io/github-action-setup-xmake@v1
+        with:
+          xmake-version: latest
+
+      - name: Cache xmake packages
+        uses: actions/cache@v4
+        with:
+          path: ~\AppData\Local\.xmake\packages
+          key: xmake-${{ hashFiles('xmake.lua', 'lib/commonlibsse-ng/xmake.lua') }}
+          restore-keys: xmake-
+
+      - name: Configure
+        run: xmake f -m releasedbg -y
+
+      - name: Build
+        run: xmake -y
+
+      - name: Collect mod folder
+        run: xmake install -o build/mod
+
+      - name: Upload mod folder
+        uses: actions/upload-artifact@v4
+        with:
+          name: SilentProtagonistVoice
+          path: build/mod
